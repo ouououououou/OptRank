@@ -25,7 +25,7 @@ Linux，python3.6
   -size　　　　　词向量的维度<br>
   -window　　　　上下文的窗口大小<br>
   -negative　　　选取的负样本个数<br>　
-  -hs　　　　  1为使用hs模型，0为使用负样本采样模型<br>
+  -hs  　　　　　1为使用hs模型，0为使用负样本采样模型<br>
   -threads　　　 训练时使用的线程数<br>
   -min-count　　 将出现频数小于一定数值的单词剔除掉<br>
   -binary　　　  训练好的词向量是否保存为二进制<br>
