@@ -19,17 +19,17 @@ Linux，python3.6
   参看demo-word.sh  <br>
   time ./OptRank3 -train text8 -output OptRank3_vectors -cbow 1 -size 300 -window 8 -negative 15 -hs 0 -sample 1e-4 -threads 20 -min-count 5 -binary 1 -iter 10<br>
 
-  -train            　　选择要使用的训练语料库，这里使用的是text8 <br>
-  -output           训练好的词向量保存时的文件名<br>
-  -cbow             是否使用cbow模型，1为使用，0为使用skip-gram<br>
-  -size             词向量的维度<br>
-  -window           上下文的窗口大小<br>
-  -negative         选取的负样本个数<br>
-  -hs               1为使用hs模型，0为使用负样本采样模型<br>
-  -threads          训练时使用的线程数<br>
-  -min-count        将出现频数小于一定数值的单词剔除掉<br>
-  -binary           训练好的词向量是否保存为二进制<br>
-  -iter             模型的迭代次数<br>
+  -train　　　　　　　选择要使用的训练语料库，这里使用的是text8 <br>
+  -output　　　　　　训练好的词向量保存时的文件名<br>
+  -cbow　　　　　　　是否使用cbow模型，1为使用，0为使用skip-gram<br>
+  -size　　　　　　　词向量的维度<br>
+  -window　　　　　　上下文的窗口大小<br>
+  -negative　　　　　选取的负样本个数<br>　
+  -hs　　　　　　　　1为使用hs模型，0为使用负样本采样模型<br>
+  -threads　　　　　训练时使用的线程数<br>
+  -min-count　　　　将出现频数小于一定数值的单词剔除掉<br>
+  -binary　　　　　　训练好的词向量是否保存为二进制<br>
+  -iter　　　　　　　模型的迭代次数<br>
 
   为了复现我们的实验结果，这里建议在使用text8，wiki_256M，wiki_512M 等中小训练语料库时将参数设置为<br>
   -cbow 1 -size 300 -window 8 -negative 15 -hs 0 -sample 1e-4 -threads 20 -min-count 5 -binary 1 -iter 10
