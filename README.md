@@ -34,10 +34,12 @@ Linux，python3.6
   由于不同词嵌入算法保存的词向量的形式不同，有些为二进制形式，有些则不是。我们提供了两种版本的评测程序，compute-accuracy和evaluate.py对应非二进制存储的词向量，加了后缀“_binary”的对应二进制形式存储的词向量
 
   compute-accuracy使用的是questions-words.txt测试数据集，对应paper中word analogy部分的实验
-  评测时使用如下命令：
+  以评测二进制存储的OptRank3_vectors为例
+  使用如下命令：  ./compute-accuracy_binary OptRank3_vectors < questions-words.txt
 
   evaluate.py使用的是data/eval中的测试数据集，对应paper中word similarity部分的实验
-  评测时使用如下命令：
+  同样以评测二进制存储的OptRank3_vectors为例
+  使用如下命令：   python evaluate_binary.py OptRank3_vectors 
 
   提示：在比较不同词嵌入算法的效果或不同参数设置下同一模型的训练效果时请使用同种存储形式的词向量，不同存储形式的词向量之间存在一定误差。
 
