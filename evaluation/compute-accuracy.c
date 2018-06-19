@@ -38,7 +38,7 @@ int main(int argc, char **argv)
   }
   strcpy(file_name, argv[1]);
   if (argc > 2) threshold = atoi(argv[2]);
-  f = fopen(file_name, "rb");
+  f = fopen(file_name, "r");
   if (f == NULL) {
     printf("Input file not found\n");
     return -1;
@@ -61,7 +61,7 @@ int main(int argc, char **argv)
     }
     vocab[b * max_w + a] = 0;
     for (a = 0; a < max_w; a++) vocab[b * max_w + a] = toupper(vocab[b * max_w + a]);
-    for (a = 0; a < size; a++) fread(&M[a + b * size], sizeof(float), 1, f);
+    for (a = 0; a < size; a++) fscanf(f, "%f", &M[a + b * size]);
     len = 0;
     for (a = 0; a < size; a++) len += M[a + b * size] * M[a + b * size];
     len = sqrt(len);
