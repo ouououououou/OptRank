@@ -19,7 +19,7 @@ Linux，python3.6
   参看demo-word.sh  <br>
   time ./OptRank3 -train text8 -output OptRank3_vectors -cbow 1 -size 300 -window 8 -negative 15 -hs 0 -sample 1e-4 -threads 20 -min-count 5 -binary 1 -iter 10<br>
 
-  -train        选择要使用的训练语料库，这里使用的是text8 <br>
+  -train        &emsp 选择要使用的训练语料库，这里使用的是text8 <br>
   -output       训练好的词向量保存时的文件名<br>
   -cbow         是否使用cbow模型，1为使用，0为使用skip-gram<br>
   -size         词向量的维度<br>
