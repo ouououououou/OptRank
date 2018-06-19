@@ -1,17 +1,22 @@
 # OptRank
+========
 
 需求环境：
+---------
 Linux，python3.6
 
 1.paper原文
+------
 
 2.如何获取训练数据集？
+------
   demo-word.sh中会自动下载text8数据集，约100MB
   还可以通过以下两种方式获得不同大小的wiki语料库数据集
   wiki_256M
   wiki_512M
 
 3.如何训练词向量？
+------
   参看demo-word.sh
   time ./OptRank3 -train text8 -output OptRank3_vectors -cbow 1 -size 300 -window 8 -negative 15 -hs 0 -sample 1e-4 -threads 20 -min-count 5 -binary 1 -iter 10
 
@@ -31,6 +36,7 @@ Linux，python3.6
   -cbow 1 -size 300 -window 8 -negative 15 -hs 0 -sample 1e-4 -threads 20 -min-count 5 -binary 1 -iter 10
 
 4.如何对生成的词向量进行评测？
+-------
   由于不同词嵌入算法保存的词向量的形式不同，有些为二进制形式，有些则不是。我们提供了两种版本的评测程序，compute-accuracy和evaluate.py对应非二进制存储的词向量，加了后缀“_binary”的对应二进制形式存储的词向量
 
   compute-accuracy使用的是questions-words.txt测试数据集，对应paper中word analogy部分的实验
