@@ -6,7 +6,7 @@ Linux，python3.6
 
 1.paper原文
 ------
-  在Github中直接可以下载，文件名为ijcai18.pdf
+  在Github中直接可以下载，文件名为IJCAI-2018-paper.pdf
   
 2.如何获取训练数据集？
 ------
